@@ -12,7 +12,7 @@ config :mirror,
 # Configures the endpoint
 config :mirror, MirrorWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "fwiAz+kafWGjzTRjQHV9TcSGSOzcXKXyQKqC53EiwVHut46530pF72zlmqEVgoD4",
+  secret_key_base: "XTtK/o7lLEgJhiCAJ8fnsUlRVqzIKfmZoZtVmD/UsPeGqNE4QURG31XGJFrbNj57",
   render_errors: [view: MirrorWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Mirror.PubSub, adapter: Phoenix.PubSub.PG2]
 
