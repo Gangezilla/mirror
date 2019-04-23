@@ -10,7 +10,6 @@ defmodule Mirror.User do
     field(:last_name, :string)
     field(:email, :string)
     field(:username, :string)
-    field(:code, :string)
 
     has_many(:reflections, Reflections)
 
@@ -34,8 +33,8 @@ defmodule Mirror.User do
 
   def changeset(%__MODULE__{} = user, attrs) do
     user
-    |> cast(attrs, [:first_name, :last_name, :email, :username, :code])
-    |> validate_required([:first_name, :last_name, :email, :username, :code])
+    |> cast(attrs, [:first_name, :last_name, :email, :username])
+    |> validate_required([:first_name, :last_name, :email, :username])
     |> unique_constraint(:email)
   end
 end

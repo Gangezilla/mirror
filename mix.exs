@@ -46,6 +46,7 @@ defmodule Mirror.Mixfile do
       {:absinthe_ecto, "~> 0.1.3"},
       {:absinthe_phoenix, "~> 1.4.0"},
       {:absinthe_plug, "~> 1.4"},
+      {:jason, "~> 1.0"},
       {:poison, "~> 3.0"}
     ]
   end
