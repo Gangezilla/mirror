@@ -1,6 +1,6 @@
 use Mix.Config
 
-config :crawler, CrawlerWeb.Endpoint,
+config :mirror, MirrorWeb.Endpoint,
   http: [port: System.get_env("PORT")],
   url: [scheme: "https", host: "mirror1.herokuapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
@@ -10,7 +10,7 @@ config :crawler, CrawlerWeb.Endpoint,
 config :logger, level: :info
 
 # Configure your database
-config :crawler, Crawler.Repo,
+config :mirror, Mirror.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
