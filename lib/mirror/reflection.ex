@@ -16,6 +16,10 @@ defmodule Mirror.Reflections do
     Repo.all(from(r in __MODULE__, order_by: [desc: r.id]))
   end
 
+  def get_all_users_reflections(user_id) do
+    Repo.all(from(r in __MODULE__, where: r.user_id == ^user_id, order_by: [desc: r.id]))
+  end
+
   def find(id) do
     Repo.get(__MODULE__, id)
   end
